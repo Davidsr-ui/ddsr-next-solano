@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionTitle from "@/components/SectionTitle";
 
 export const metadata: Metadata = {
   title: "Servicios",
@@ -15,7 +16,7 @@ const servicios = [
 export default function Servicios() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16">
-      <h1 className="text-4xl font-bold">Servicios</h1>
+      <SectionTitle titulo="Servicios" como="h1" />
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         {servicios.map(([titulo, texto]) => (
           <div key={titulo} className="rounded-xl bg-superficie p-6">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionTitle from "@/components/SectionTitle";
 
 export const metadata: Metadata = {
   title: "Marcas",
@@ -14,7 +15,7 @@ const lineas = [
 export default function Marcas() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16">
-      <h1 className="text-4xl font-bold">Marcas</h1>
+      <SectionTitle titulo="Marcas" como="h1" />
       <div className="mt-8 grid gap-6 md:grid-cols-3">
         {lineas.map(([nombre, texto]) => (
           <div key={nombre} className="rounded-xl bg-superficie p-8 text-center">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionTitle from "@/components/SectionTitle";
 
 export const metadata: Metadata = {
   title: "Nosotros",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 export default function Nosotros() {
   return (
     <section className="mx-auto max-w-4xl px-4 py-16">
-      <h1 className="text-4xl font-bold">Nosotros</h1>
+      <SectionTitle titulo="Nosotros" como="h1" />
       <p className="mt-4 text-texto/80">
         DDSR nació para ofrecer ropa deportiva cómoda, resistente y con estilo
         para quienes entrenan todos los días.
