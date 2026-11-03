@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 
 const enlaces = [
   { href: "/", texto: "Inicio" },
@@ -27,7 +28,11 @@ export default function Navbar() {
           href="/"
           className="w-fit bg-linear-to-r from-azul-oscuro to-azul-claro bg-clip-text text-2xl font-bold text-transparent"
         >
-          DDSR
+          <img
+            src="/img/LogoDSR.png"
+            alt="Logo DDSR"
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         {/* Botón hamburguesa: solo en pantallas pequeñas */}
@@ -38,7 +43,14 @@ export default function Navbar() {
           aria-label="Abrir o cerrar menú"
           aria-expanded={abierto}
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             {abierto ? (
               <path d="M6 6l12 12M18 6L6 18" />
             ) : (
