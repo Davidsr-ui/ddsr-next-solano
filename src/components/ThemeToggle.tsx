@@ -37,7 +37,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label={`Cambiar al tema ${theme === "dark" ? "claro" : "oscuro"}`}
-      className="rounded-md p-2 text-texto transition-colors hover:bg-superficie focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primario"
+      className="rounded-md p-2 text-current transition-colors hover:bg-superficie focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primario"
     >
       {theme === "dark" ? (
         <svg

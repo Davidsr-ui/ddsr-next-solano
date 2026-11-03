@@ -13,16 +13,22 @@ export default function Home() {
   return (
     <>
       <Hero
-        titulo="Entrena sin límites"
-        subtitulo="Prendas deportivas DDSR diseñadas para rendir en cada movimiento."
-        imagen="/img/Productos/buzo-street.jpg"
-        alt="Deportista entrenando con ropa deportiva"
+        titulo="ROPA DEPORTIVA"
+        tituloComplemento="para todos tus entrenamientos"
+        subtitulo="Somos una tienda de prendas deportivas para entrenar con estilo."
+        imagen="/img/fondo.jpg"
+        alt="Interior de una tienda de ropa deportiva con prendas colgadas"
         textoBoton="Ver productos"
         hrefBoton="/productos"
+        alineacion="derecha"
       />
 
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <SectionTitle titulo="Destacados" subtitulo="Lo más pedido de la tienda" centrado />
+        <SectionTitle
+          titulo="Destacados"
+          subtitulo="Lo más pedido de la tienda"
+          centrado
+        />
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {productos.slice(0, 3).map((p) => (
             <ProductCard key={p.slug} producto={p} />
@@ -35,7 +41,9 @@ export default function Home() {
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {beneficios.map(([titulo, texto]) => (
             <div key={titulo} className="rounded-xl bg-superficie p-6">
-              <h3 className="text-xl font-semibold text-azul-claro">{titulo}</h3>
+              <h3 className="text-xl font-semibold text-azul-claro">
+                {titulo}
+              </h3>
               <p className="mt-2 text-texto/80">{texto}</p>
             </div>
           ))}

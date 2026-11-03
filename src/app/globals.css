@@ -9,6 +9,7 @@
   --primario: #1f70c1;
   --azul-oscuro: #1a56b0;
   --azul-claro: #58b4ff;
+  --whatsapp: #25d366;
 }
 
 [data-theme="light"] {
@@ -19,6 +20,7 @@
   --primario: #1f70c1;
   --azul-oscuro: #174a88;
   --azul-claro: #1f5f9e;
+  --whatsapp: #25d366;
 }
 
 @theme inline {
@@ -28,6 +30,7 @@
   --color-primario: var(--primario);
   --color-azul-oscuro: var(--azul-oscuro);
   --color-azul-claro: var(--azul-claro);
+  --color-whatsapp: var(--whatsapp);
 
   --font-sans: var(--font-barlow);
 }
