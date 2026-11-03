@@ -15,7 +15,7 @@ export default function Home() {
       <Hero
         titulo="Entrena sin límites"
         subtitulo="Prendas deportivas DDSR diseñadas para rendir en cada movimiento."
-        imagen="/img/hero.jpg"
+        imagen="/img/Productos/buzo-street.jpg"
         alt="Deportista entrenando con ropa deportiva"
         textoBoton="Ver productos"
         hrefBoton="/productos"

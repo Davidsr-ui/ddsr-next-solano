@@ -1,5 +1,5 @@
 const campo =
-  "w-full rounded-md bg-fondo px-4 py-3 outline-none focus:ring-2 focus:ring-primario";
+  "w-full rounded-md bg-fondo px-4 py-3 text-texto placeholder:text-texto/60 outline-none focus:ring-2 focus:ring-primario";
 
 export default function ContactForm() {
   return (
@@ -18,7 +18,7 @@ export default function ContactForm() {
       </div>
       <button
         type="button"
-        className="rounded-lg bg-primario px-6 py-3 font-semibold transition hover:bg-azul-claro"
+        className="rounded-lg bg-primario px-6 py-3 font-semibold text-white transition hover:bg-azul-oscuro"
       >
         Enviar
       </button>

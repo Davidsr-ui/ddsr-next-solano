@@ -28,14 +28,14 @@ export default function Hero({
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-linear-to-b from-azul-oscuro/60 to-fondo" />
+      <div className="absolute inset-0 bg-linear-to-b from-azul-oscuro/75 to-black/85" />
 
-      <div className="relative z-10">
+      <div className="relative z-10 text-white">
         <h1 className="text-4xl font-bold md:text-6xl">{titulo}</h1>
-        <p className="mx-auto mt-4 max-w-xl text-lg text-texto/90">{subtitulo}</p>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-white/90">{subtitulo}</p>
         <Link
           href={hrefBoton}
-          className="mt-8 inline-block rounded-lg bg-primario px-8 py-3 font-semibold transition hover:bg-azul-claro"
+          className="mt-8 inline-block rounded-lg bg-primario px-8 py-3 font-semibold text-white transition hover:bg-azul-oscuro"
         >
           {textoBoton}
         </Link>

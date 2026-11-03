@@ -17,7 +17,7 @@ export const productos: Producto[] = [
     categoria: "Camisetas",
     precio: 59.9,
     descripcion: "Camiseta ligera y transpirable para correr largas distancias.",
-    imagen: "/img/productos/camiseta-run.jpg",
+    imagen: "/img/Productos/camiseta-run.jpg",
     tallas: ["S", "M", "L", "XL"],
   },
   {
@@ -27,7 +27,7 @@ export const productos: Producto[] = [
     categoria: "Shorts",
     precio: 49.9,
     descripcion: "Short elástico con bolsillos, ideal para entrenamiento intenso.",
-    imagen: "/img/productos/short-pro.jpg",
+    imagen: "/img/Productos/short-pro.jpg",
     tallas: ["S", "M", "L", "XL"],
   },
   {
@@ -37,7 +37,7 @@ export const productos: Producto[] = [
     categoria: "Buzos",
     precio: 119.9,
     descripcion: "Buzo cómodo y abrigador para el día a día.",
-    imagen: "/img/productos/buzo-street.jpg",
+    imagen: "/img/Productos/buzo-street.jpg",
     tallas: ["M", "L", "XL"],
   },
   {
@@ -47,7 +47,7 @@ export const productos: Producto[] = [
     categoria: "Calzado",
     precio: 189.9,
     descripcion: "Zapatillas con amortiguación para running en asfalto.",
-    imagen: "/img/productos/zapatillas-run.jpg",
+    imagen: "/img/Productos/zapatillas-run.jpg",
     tallas: ["38", "39", "40", "41", "42", "43"],
   },
   {
@@ -57,7 +57,7 @@ export const productos: Producto[] = [
     categoria: "Leggings",
     precio: 79.9,
     descripcion: "Leggings de compresión media que se ajustan sin limitar el movimiento.",
-    imagen: "/img/productos/leggings-pro.jpg",
+    imagen: "/img/Productos/leggings-pro.jpg",
     tallas: ["S", "M", "L"],
   },
   {
@@ -67,7 +67,7 @@ export const productos: Producto[] = [
     categoria: "Accesorios",
     precio: 34.9,
     descripcion: "Gorra ajustable con visera curva y logo bordado.",
-    imagen: "/img/productos/gorra-street.jpg",
+    imagen: "/img/Productos/gorra-street.jpg",
     tallas: ["Única"],
   },
 ];

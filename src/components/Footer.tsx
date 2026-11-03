@@ -1,13 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="mt-16 border-t border-superficie bg-superficie/40">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-3">
         <div>
-          <p className="w-fit bg-linear-to-r from-azul-oscuro to-azul-claro bg-clip-text text-2xl font-bold text-transparent">
-            DDSR
-          </p>
+          <Link href="/" aria-label="DDSR, inicio" className="inline-block">
+            <Image
+              src="/LogoDSR.png"
+              alt="Logo de DDSR"
+              width={160}
+              height={80}
+              className="h-40 w-auto object-contain"
+            />
+          </Link>
           <p className="mt-2 text-sm text-texto/70">
             Prendas deportivas para entrenar con estilo.
           </p>
@@ -25,7 +32,7 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold">Contacto</h3>
           <ul className="mt-2 space-y-1 text-sm text-texto/70">
-            <li>Lima, Perú</li>
+            <li>Trujillo, Perú</li>
             <li>ventas@ddsr.pe</li>
             <li>+51 910 492 787</li>
           </ul>

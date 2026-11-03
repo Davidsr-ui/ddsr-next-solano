@@ -57,7 +57,7 @@ export default async function DetalleProducto({ params }: Props) {
 
           <Link
             href="/contacto"
-            className="mt-8 inline-block rounded-lg bg-primario px-8 py-3 font-semibold transition hover:bg-azul-claro"
+            className="mt-8 inline-block rounded-lg bg-primario px-8 py-3 font-semibold text-white transition hover:bg-azul-oscuro"
           >
             Consultar disponibilidad
           </Link>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const enlaces = [
   { href: "/", texto: "Inicio" },
@@ -24,14 +25,13 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-superficie bg-fondo/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link
-          href="/"
-          className="w-fit bg-linear-to-r from-azul-oscuro to-azul-claro bg-clip-text text-2xl font-bold text-transparent"
-        >
-          <img
-            src="/img/LogoDSR.png"
-            alt="Logo DDSR"
-            className="h-12 w-auto object-contain"
+        <Link href="/" aria-label="DDSR, inicio" className="w-fit">
+          <Image
+            src="/LogoDSR.png"
+            alt="Logo de DDSR"
+            width={160}
+            height={80}
+            className="h-25 w-auto object-contain"
           />
         </Link>
 
@@ -76,6 +76,9 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+        <div className="hidden md:block">
+          <ThemeToggle />
+        </div>
       </nav>
 
       {/* Menú móvil desplegable */}
@@ -96,6 +99,9 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li className="flex justify-end pt-1">
+            <ThemeToggle />
+          </li>
         </ul>
       )}
     </header>
