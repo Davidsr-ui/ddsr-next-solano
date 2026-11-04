@@ -20,7 +20,7 @@ Sitio web corporativo de **DDSR**, una tienda de prendas deportivas, desarrollad
 Requisitos: Node.js 20 o superior y npm.
 
 ```bash
-git clone <URL del repositorio>
+git clone <https://github.com/Davidsr-ui/ddsr-next-solano.git>
 cd ddsr-next-solano
 npm install
 npm run dev
