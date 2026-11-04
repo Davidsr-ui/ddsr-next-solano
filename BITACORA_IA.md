@@ -1,29 +1,5 @@
 # Bitácora de uso de IA: DDSR
 
-Herramientas: **Claude** (guía y código), **opencode** (agente en el proyecto) y **Gemini** (imágenes y logos).
-
-## 1. Entradas
-
-### Entrada 1: Plan del proyecto
-- **Objetivo:** Planificar el sitio de DDSR según la rúbrica.
-- **Prompt:** "Modo plan, sin código: marca DDSR, ropa deportiva, Tailwind, esta paleta, carpeta `src/` y commits progresivos."
-- **Respuesta:** Plan con paleta como tokens, estructura de carpetas, componentes y 10 commits.
-- **Decisión:** Modificado
-- **Justificación:** Mantuve la estructura y cambié el orden de algunos pasos. El cuarto color de la paleta no traía hex y lo ajusté yo.
-
-### Entrada 2: Opciones de `create-next-app`
-- **Objetivo:** Saber qué elegir al crear el proyecto.
-- **Prompt:** "Dame los pasos para crear el proyecto y las opciones de selección" (con capturas).
-- **Respuesta:** TypeScript, ESLint, Tailwind, `src/` y App Router. Indicó "customize settings" porque los valores recomendados no usan `src/`.
-- **Decisión:** Aceptado
-- **Justificación:** Coincidía con el enunciado y con mi plan.
-
-### Entrada 3: Justificaciones de `DECISIONES.md`
-- **Objetivo:** Redactar las decisiones y la comparación con una SPA.
-- **Prompt:** "Dame las respuestas de las preguntas y las decisiones", y luego "cortas y específicas".
-- **Respuesta:** Borrador con tablas de decisión.
-- **Decisión:** Modificado
-- **Justificación:** Lo acorté y usé ejemplos de DDSR (el tipo `Producto`, `/productos/camiseta-run`) para no dejarlo genérico.
 
 ### Entrada 4: Tema claro/oscuro y logo (opencode)
 - **Objetivo:** Colocar el logo y agregar tema claro/oscuro.
@@ -59,13 +35,6 @@ Herramientas: **Claude** (guía y código), **opencode** (agente en el proyecto)
 ```
 **Explicación:** El `h1` ocupaba todo el ancho y el degradado se repartía sobre esa anchura, pero el texto cubría solo la izquierda. Con `w-fit` el degradado recorre solo las letras.
 
-### Caso 2: opencode cambió colores que no pedí
-**Antes:** Navbar con fondo azul sólido de colores fijos.
-**Después:**
-```tsx
-<header className="sticky top-0 z-50 border-b border-superficie bg-fondo/90 backdrop-blur">
-```
-**Explicación:** Yo solo pedí íconos y posición del texto. Los colores fijos rompían el tema claro y oscuro. Pedí restaurar las variables del tema y desde entonces escribo "no cambies colores" en cada prompt.
 
 ### Caso 3: Logo con corchetes (Gemini)
 **Antes:** el prompt decía `"[DDSR Run]"` y el logo salió con corchetes.
