@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DDSR: Tienda de ropa deportiva
 
-## Getting Started
+Sitio web corporativo de **DDSR**, una tienda de prendas deportivas, desarrollado con **Next.js (App Router)**, TypeScript y Tailwind CSS.
 
-First, run the development server:
+- **Autor:** Daniel David Solano Ramos
+- **Repositorio:** <https://github.com/Davidsr-ui/ddsr-next-solano>
+- **Sitio desplegado:** <URL de Vercel>
+
+## Tecnologías
+
+| Tecnología | Uso |
+|---|---|
+| Next.js 16 (App Router) | Enrutamiento basado en archivos, Server Components y metadata |
+| TypeScript | Tipado de datos y props |
+| Tailwind CSS v4 | Estilos y tema claro/oscuro definido una sola vez en `globals.css` |
+| next/image y next/font | Imágenes optimizadas y tipografía Barlow |
+
+## Instalación y ejecución
+
+Requisitos: Node.js 20 o superior y npm.
 
 ```bash
+git clone <https://github.com/Davidsr-ui/ddsr-next-solano.git>
+cd ddsr-next-solano
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir http://localhost:3000 en el navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Comando | Descripción |
+|---|---|
+| `npm run dev` | Servidor de desarrollo |
+| `npm run build` | Compila el proyecto para producción |
+| `npm run start` | Ejecuta la versión compilada |
+| `npm run lint` | Revisa el código con ESLint |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Rutas
 
-## Learn More
+| Ruta | Página |
+|---|---|
+| `/` | Inicio |
+| `/nosotros` | Nosotros |
+| `/servicios` | Servicios |
+| `/productos` | Listado de productos |
+| `/productos/[slug]` | Detalle de producto (ruta dinámica; usa `notFound()` si el slug no existe) |
+| `/marcas` | Marcas |
+| `/contacto` | Contacto |
+| cualquier otra | Página 404 personalizada |
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura del proyecto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├─ app/            rutas, layout raíz, 404 y estilos globales
+├─ components/     componentes reutilizables
+└─ data/           datos de productos y marcas
+public/img/        logo e imágenes del sitio
+evidencias/        capturas de build, Network y responsive
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Árbol de componentes
 
-## Deploy on Vercel
+(S) = Server Component, (C) = Client Component
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+RootLayout (S)
+├─ Navbar (C)            usa usePathname y useState
+│  └─ ThemeToggle (C)    usa estado y localStorage
+├─ <main> {children}
+│  ├─ Inicio:      Hero (S), SectionTitle (S), ProductCard (S)
+│  ├─ Nosotros:    SectionTitle (S), IconCard (S), GaleriaCard (S)
+│  ├─ Servicios:   SectionTitle (S), ServicioCard (S)
+│  ├─ Productos:   SectionTitle (S), ProductCard (S)
+│  ├─ Marcas:      SectionTitle (S), MarcaCard (S)
+│  └─ Contacto:    SectionTitle (S), ContactForm (S)
+├─ Footer (S)
+└─ WhatsAppButton (S)
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Documentación del proyecto
+
+- [DECISIONES.md](./DECISIONES.md): decisiones de configuración, rutas, estilos y justificaciones
+- [BITACORA_IA.md](./BITACORA_IA.md): registro del uso de IA, errores detectados y reflexión
+- [evidencias/](./evidencias): capturas del build, de la pestaña Network y del diseño responsive
