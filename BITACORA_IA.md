@@ -54,4 +54,3 @@ git mv public/img/temporal public/img/productos
 
 La IA me ayudó a entender qué va en el servidor y qué en el cliente: solo el Navbar y el cambio de tema necesitan `"use client"`. También me aceleró con Tailwind y los componentes reutilizables.
 
-Lo que tuve que razonar yo fue lo que dependía de mi proyecto: la IA no sabía que mi foto era vertical ni dónde guardé los archivos, así que el Hero se recortaba o salía roto hasta que revisé el formato y las rutas. Con opencode aprendí que un agente puede cambiar cosas que no pedí y que debo revisar el diff antes de cada commit.
