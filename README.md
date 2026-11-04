@@ -4,7 +4,7 @@ Sitio web corporativo de **DDSR**, una tienda de prendas deportivas, desarrollad
 
 - **Autor:** Daniel David Solano Ramos
 - **Repositorio:** <https://github.com/Davidsr-ui/ddsr-next-solano>
-- **Sitio desplegado:** <URL de Vercel>
+- **Sitio desplegado:** <https://ddsr-next-solano.vercel.app/>
 
 ## Tecnologías
 
