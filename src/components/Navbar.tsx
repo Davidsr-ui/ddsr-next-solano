@@ -81,7 +81,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" aria-label="DDSR, inicio" className="w-fit">
           <Image
-            src="/LogoDSR.png"
+            src="/img/logo-ddsr.png"
             alt="Logo de DDSR"
             width={160}
             height={80}

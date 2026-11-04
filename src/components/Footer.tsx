@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <Link href="/" aria-label="DDSR, inicio" className="inline-block">
             <Image
-              src="/LogoDSR.png"
+              src="/img/logo-ddsr.png"
               alt="Logo de DDSR"
               width={160}
               height={80}
